@@ -5,14 +5,15 @@ const Schema = mongoose.Schema
 
 const librarySchema = new Schema({
   name: String,
-  project: String,
-  projectUrl: String,
+  project_name: String,
+  project_url: String,
+  github_url: String,
   category: [String]
 })
 
-
-
-
 librarySchema.plugin(paginate)
+
+export default libraryModel = mongoose.model('library', librarySchema)
+
 
 
