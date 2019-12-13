@@ -5,7 +5,7 @@ import dotenv from 'dotenv'
 import helmet from 'helmet'
 import mongoose from 'mongoose'
 import { log } from 'console'
-import library from './routes/library.route'
+import libraryRoutes from './routes/library.route'
 
 
 const app = express()
@@ -16,7 +16,7 @@ dotenv.config()
 app.use(helmet())
 app.use(cors())
 app.use(compression())
-app.use('/api', library)
+app.use('/api', libraryRoutes)
 app.use('/categories')
 
 mongoose.connect(process.env.DB_URL, { useNewUrlParser: true })
