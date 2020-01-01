@@ -19,6 +19,7 @@ app.use(compression())
 app.use('/api', libraryRoutes)
 // app.use('/categories', cat3)
 
+app.get('/', (req, res) => res.send('welcome to ng hub'))
 mongoose.connect(process.env.DB_URL, { useNewUrlParser: true })
 mongoose.connection.on('connection', () => log('DB connected'))
 
