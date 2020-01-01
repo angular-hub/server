@@ -13,7 +13,7 @@ const librarySchema = new Schema({
 
 librarySchema.plugin(paginate)
 
-export default libraryModel = mongoose.model('library', librarySchema)
+export default mongoose.model('library', librarySchema)
 
 
 

@@ -17,7 +17,7 @@ app.use(helmet())
 app.use(cors())
 app.use(compression())
 app.use('/api', libraryRoutes)
-app.use('/categories')
+// app.use('/categories', cat3)
 
 mongoose.connect(process.env.DB_URL, { useNewUrlParser: true })
 mongoose.connection.on('connection', () => log('DB connected'))
